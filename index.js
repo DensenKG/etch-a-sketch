@@ -1,13 +1,29 @@
 const container = document.querySelector('#container');
-let totalSquares = 256;
+let numRows = 16;
+let numColumns = numRows;
 document.body.onload = createGrid;
 
 function createGrid()
 {
-  for (var i = 0; i < totalSquares; i++)
+  for (var i = 0; i < numRows; i++)
   {
-    var gridSquare = document.createElement("div");
-    gridSquare.classList.add("square");
-    container.appendChild(gridSquare);
+    for (var j= 0; j < numColumns; j++)
+    {
+      var gridSquare = document.createElement("div");
+      gridSquare.classList.add("square");
+      container.appendChild(gridSquare);
+    }
+  }
+  updateGrid();
+}
+
+function updateGrid()
+{
+  var allSquares = document.querySelectorAll('.square');
+  for (var i =0; i<allSquares.length; i++)
+  {
+    allSquares[i].addEventListener("mouseover", function(){
+      this.classList.add('colored');
+    });
   }
 }
