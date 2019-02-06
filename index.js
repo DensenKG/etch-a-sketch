@@ -1,7 +1,11 @@
 const container = document.querySelector('#container');
 let numRows = 16;
 let numColumns = numRows;
+let clearButton = document.getElementById('clear-button');
+let resizeButton = document.getElementById('resize-button');
 document.body.onload = createGrid;
+clearButton.addEventListener("click", clearGrid);
+resizeButton.addEventListener("click", resizeGrid);
 
 function createGrid()
 {
@@ -26,4 +30,18 @@ function updateGrid()
       this.classList.add('colored');
     });
   }
+}
+
+function clearGrid()
+{
+  var allColoredSquares = document.querySelectorAll('.colored');
+  for (var i=0; i<allColoredSquares.length; i++)
+  {
+    allColoredSquares[i].classList.remove('colored');
+  }
+}
+
+function resizeGrid()
+{
+  
 }
