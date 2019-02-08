@@ -1,6 +1,7 @@
 const container = document.querySelector('#container');
 let numRows = 16;
 let numColumns = numRows;
+let root = document.documentElement.style;
 let clearButton = document.getElementById('clear-button');
 let resizeButton = document.getElementById('resize-button');
 document.body.onload = createGrid;
@@ -43,5 +44,13 @@ function clearGrid()
 
 function resizeGrid()
 {
-  
+  var newSize = prompt("How many rows (and columns) should there be?", "16");
+  while (container.hasChildNodes())
+  {
+    container.removeChild(container.firstChild);
+  }
+  numRows = parseInt(newSize);
+  numColumns = numRows;
+  root.setProperty('--total-rows', numRows);
+  createGrid();
 }

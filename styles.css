@@ -1,7 +1,14 @@
+:root {
+  --total-rows: 16;
+  --total-columns: var(--total-rows);
+}
+
 #container {
   display: grid;
-  grid-template-rows: repeat(16, 25px);
-  grid-template-columns: repeat(16, 25px);
+  width: 750px;
+  height:750px;
+  grid-template-rows: repeat(var(--total-rows), auto);
+  grid-template-columns: repeat(var(--total-columns), auto);
   grid-gap: 5px;
 }
 
