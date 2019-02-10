@@ -1,4 +1,4 @@
-const container = document.querySelector('#container');
+let container = document.querySelector('#container');
 let numRows = 16;
 let numColumns = numRows;
 let root = document.documentElement.style;

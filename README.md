@@ -1,1 +1,3 @@
-This project is a part of the Odin Project's [curriculum](https://www.theodinproject.com/courses/web-development-101/lessons/etch-a-sketch-project).
+This project is a part of the Odin Project's [curriculum](https://www.theodinproject.com/courses/web-development-101/lessons/etch-a-sketch-project). It is a sketchpad of sorts consisting of a grid of squares created using a combination of CSS and JavaScript. Moving the mouse cursor over a square changes its color. There are two buttons above the grid. One clears the grid of colored squares, and the other allows users to resize the grid via a prompt.
+
+Note: The color change stops being visible at 105 rows and columns, and the grid boundaries are exceeded at 109 rows and columns. The best results are at and below 80 rows and columns.

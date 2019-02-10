@@ -3,13 +3,32 @@
   --total-columns: var(--total-rows);
 }
 
+body {
+  background-color: #FFDAB9;
+}
+
 #container {
   display: grid;
+  background-color: #E1DFDD;
   width: 750px;
   height:750px;
   grid-template-rows: repeat(var(--total-rows), auto);
   grid-template-columns: repeat(var(--total-columns), auto);
   grid-gap: 5px;
+  margin: auto;
+  border: 20px solid red;
+  border-radius: 20px;
+  padding: 2px;
+}
+
+#button-container {
+  margin: auto;
+  width: 750px;
+  padding-bottom: 1em;
+}
+
+#resize-button {
+  float: right;
 }
 
 .square {
@@ -19,4 +38,12 @@
 
 .colored {
   background-color: black;
+}
+
+.button {
+  background-color: #4169E1;
+  color: white;
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 20px;
+  border-radius: 20px;
 }
